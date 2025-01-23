@@ -1,0 +1,547 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #28a745;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-content h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+#search-box {
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+#cart-button {
+  background-color: white;
+  color: #28a745;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#cart-button:hover {
+  background-color: #ddd;
+}
+
+/* Product List */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.product img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.product p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #555;
+}
+
+.add-to-cart {
+  background-color: #28a741;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #883e21;
+}
+
+/* Cart Modal */
+.cart-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  max-width: 90%;
+  display: none;
+  z-index: 1000;
+}
+
+.cart-modal h3 {
+  margin: 0;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.cart-modal ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+.cart-modal ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-modal ul li:last-child {
+  border-bottom: none;
+}
+
+.cart-modal ul li button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.cart-modal ul li button:hover {
+  background-color: #c82333;
+}
+
+#total {
+  font-weight: bold;
+}
+
+.cart-modal button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#pay-button {
+  background-color: #28a745;
+  color: white;
+  margin-bottom: 10px;
+}
+
+#pay-button:hover {
+  background-color: #218838;
+}
+
+#close-cart {
+  background-color: #ddd;
+  color: black;
+}
+
+#close-cart:hover {
+  background-color: #ccc;
+}
+
+/* QR Code Modal */
+.qr-code {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: none;
+  text-align: center;
+  z-index: 1100;
+}
+
+.qr-code h3 {
+  margin-bottom: 15px;
+}
+
+.qr-code img {
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.qr-code button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.qr-code button:hover {
+  background-color: #c82333;
+}
+/* Contact Button */
+#contact-button {
+  background-color: white;
+  color: #28a745;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+#contact-button:hover {
+  background-color: #ddd;
+}
+
+/* Contact Modal */
+.contact-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  max-width: 90%;
+  display: none;
+  z-index: 1000;
+}
+
+.contact-modal h3 {
+  margin: 0 0 15px;
+  text-align: center;
+}
+
+.contact-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-modal label {
+  font-size: 14px;
+  color: #555;
+}
+
+.contact-modal input,
+.contact-modal textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.contact-modal button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-modal button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+#close-contact {
+  margin-top: 10px;
+  background-color: #ddd;
+  color: black;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#close-contact:hover {
+  background-color: #ccc;
+}
+
+/* Success Notification */
+.success-notification {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1100;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Sign-Up Button */
+#signup-button {
+  background-color: white;
+  color: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+#signup-button:hover {
+  background-color: #ddd;
+}
+
+/* Sign-Up Modal */
+.signup-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  max-width: 90%;
+  display: none;
+  z-index: 1000;
+}
+
+.signup-modal h3 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.signup-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.signup-modal label {
+  font-size: 14px;
+  color: #555;
+}
+
+.signup-modal input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.signup-modal button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.signup-modal button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+#close-signup {
+  margin-top: 10px;
+  background-color: #ddd;
+  color: black;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#close-signup:hover {
+  background-color: #ccc;
+}
+
+/* Sign-Up Success Notification */
+#signup-success {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1100;
+  text-align: center;
+  font-size: 16px;
+}
+/* Basic header styling */
+#header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+h1 {
+  margin: 0;
+}
+
+#signup-button {
+  margin-right: auto;
+  padding: 10px 20px;
+  background-color: #FF9F00; /* Vibrant color */
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#signup-button:hover {
+  background-color: #E68900;
+}
+
+/* User info display */
+#user-info {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  color: #FF9F00;
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#user-info.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Sign-Up Modal Styling */
+.signup-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space out content and close button */
+  height: 500px; /* Adjust height as needed */
+  z-index: 1000;
+}
+
+/* Close button positioned at the bottom */
+#close-signup {
+  margin-top: auto; /* Pushes the button to the bottom */
+  background-color: #ddd;
+  color: black;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#close-signup:hover {
+  background-color: #ccc;
+}
+
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.footer-left p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer-right p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer-right a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+

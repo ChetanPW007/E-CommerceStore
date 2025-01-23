@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Grocer Swiggy</h1>
+            <p id="quote">You want quality! We offer U quality</p>
+            <input type="text" id="search-box" placeholder="Search items..." />
+            <button id="cart-button" onclick="showCart()">Cart (<span id="cart-count">0</span>)</button>
+            <button id="contact-button">Support</button>
+            <button id="signup-button">Sign Up</button>
+        </div>
+    </header>
+
+    <div class="product-list" id="product-list">
+       <!-- Items List Container -->
+   </div> <!-- Closing div tag for product-list -->
+
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cart-modal">
+        <h3>Your Cart</h3>
+        <ul id="cart-items"></ul>
+        <p>Total: <span id="total">0</span></p>
+      
+        <button id="pay-button">Pay</button>
+        <button id="close-cart">Close</button>
+    </div>
+
+    <!-- QR Code Modal -->
+    <div class="qr-code" id="qr-code" style="display: none;">
+        <h3>Pay with QR Code</h3>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?data=Payment&size=150x150" alt="QR Code" />
+        <button id="clear-qr">Clear</button>
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="contact-modal" id="contact-modal" style="display: none;">
+        <h3>Contact Us</h3>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+            
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required />
+            
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+            
+            <label for="product">Product Name:</label>
+            <input type="text" id="product" name="product" />
+            
+            <label for="query">Query:</label>
+            <textarea id="query" name="query" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+        <button id="close-contact">Close</button>
+    </div>
+
+    <!-- Success Notification -->
+    <div class="success-notification" id="success-notification" style="display: none;">
+        <p>Submit Successful!</p>
+    </div>
+
+    <!-- Sign-Up Modal -->
+    <div class="signup-modal" id="signup-modal" style="display: none;">
+        <h3>Create Your Account</h3>
+        <form id="signup-form">
+            <label for="signup-name">Full Name:</label>
+            <input type="text" id="signup-name" name="name" required />
+            
+            <label for="signup-email">Email:</label>
+            <input type="email" id="signup-email" name="email" required />
+            
+            <label for="signup-password">Password:</label>
+            <input type="password" id="signup-password" name="password" required />
+            
+            <label for="signup-confirm-password">Confirm Password:</label>
+            <input type="password" id="signup-confirm-password" name="confirm_password" required />
+            
+            <button type="submit">Sign Up</button>
+        </form>
+        <button id="close-signup">Close</button>
+    </div>
+
+    <!-- Success Notification -->
+    <div class="success-notification" id="signup-success" style="display: none;">
+        <p>Sign-Up Successful!</p>
+    </div>
+
+    <div id="user-info" style="display: none;">
+        <span id="user-name"></span>  <!-- Displays user's name -->
+    </div>
+    
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>&copy; 2024 Grocer Swiggy. All rights reserved.</p>
+            </div>
+            <div class="footer-right">
+                <p>Contact us: <a href="mailto:GrocerSwiggy@gmail.com">GrocerSwiggy@gmail.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
